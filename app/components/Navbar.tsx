@@ -1,21 +1,21 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Activities', path: '/activities' },
-    { label: 'Admissions', path: '/admissions' },
-    { label: 'About Us', path: '/about' },
-    { label: 'Contact Us', path: '/contact' },
-    { label: 'Gallery', path: '/gallery' },
-  ]
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Admissions", path: "/admissions" },
+    { label: "Activities", path: "/activities" },
+    { label: "Gallery", path: "/gallery" },
+    { label: "Contact Us", path: "/contact" },
+  ];
 
   return (
     <nav className="w-full bg-primary shadow-md m-0">
@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-xl font-bold text-white">
-              Appleseed
+              APPLESEED
             </Link>
           </div>
 
@@ -35,8 +35,8 @@ export default function Navbar() {
                 href={item.path}
                 className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                   pathname === item.path
-                    ? 'border-white text-white'
-                    : 'border-transparent text-gray-200 hover:border-gray-200 hover:text-white'
+                    ? "border-white text-white"
+                    : "border-transparent text-gray-200 hover:border-gray-200 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -100,8 +100,8 @@ export default function Navbar() {
                 href={item.path}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   pathname === item.path
-                    ? 'bg-primary-light text-white'
-                    : 'text-gray-200 hover:bg-primary-light hover:text-white'
+                    ? "bg-primary-light text-white"
+                    : "text-gray-200 hover:bg-primary-light hover:text-white"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -112,5 +112,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
-} 
+  );
+}
