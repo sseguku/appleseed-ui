@@ -2,11 +2,29 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const nav = document.getElementById("mobile-menu");
+      if (nav && !nav.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   const navItems = [
     { label: "Home", path: "/" },
@@ -18,25 +36,29 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full bg-primary shadow-md m-0">
-      <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+    <nav className="w-full bg-primary shadow-md m-0 fixed top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
+          {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold text-white">
+            <Link
+              href="/"
+              className="text-xl font-bold text-white hover:text-gray-200 transition-colors"
+            >
               APPLESEED
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === item.path
-                    ? "border-white text-white"
-                    : "border-transparent text-gray-200 hover:border-gray-200 hover:text-white"
+                    ? "text-white border-b-2 border-white"
+                    : "text-gray-200 hover:text-white hover:bg-primary-dark"
                 }`}
               >
                 {item.label}
@@ -48,11 +70,12 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-expanded="false"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 
+                hover:text-white hover:bg-primary-dark focus:outline-none focus:ring-2 
+                focus:ring-inset focus:ring-white transition-colors"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
-              {/* Hamburger Icon */}
               {!isMenuOpen ? (
                 <svg
                   className="block h-6 w-6"
@@ -69,7 +92,6 @@ export default function Navbar() {
                   />
                 </svg>
               ) : (
-                // Close Icon
                 <svg
                   className="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -91,26 +113,30 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-primary-dark">
-          <div className="px-8 md:px-12 lg:px-16 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === item.path
-                    ? "bg-primary-light text-white"
-                    : "text-gray-200 hover:bg-primary-light hover:text-white"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+      <div
+        id="mobile-menu"
+        className={`md:hidden transition-all duration-300 ease-in-out ${
+          isMenuOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
+        }`}
+      >
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-primary-dark shadow-lg">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                pathname === item.path
+                  ? "bg-primary text-white"
+                  : "text-gray-200 hover:bg-primary hover:text-white"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

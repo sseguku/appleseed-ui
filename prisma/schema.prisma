@@ -1,1 +1,41 @@
- 
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define your models here
+model Student {
+  id        Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+  dateOfBirth DateTime
+  class     Class    @relation(fields: [classId], references: [id])
+  classId   Int
+  parents   Parent[]
+}
+
+model Class {
+  id       Int       @id @default(autoincrement())
+  name     String
+  students Student[]
+  teacher  Teacher   @relation(fields: [teacherId], references: [id])
+  teacherId Int
+}
+
+model Parent {
+  id       Int      @id @default(autoincrement())
+  name     String
+  phone    String
+  email    String
+  students Student[]
+}
+
+model Teacher {
+  id      Int     @id @default(autoincrement())
+  name    String
+  classes Class[]
+} 

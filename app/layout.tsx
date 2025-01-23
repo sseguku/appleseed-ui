@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "For the Future We Prepare | Appleseed Preschool",
-  description: "Appleseed Preschool and Kindergarten - Nurturing young minds for a brighter tomorrow",
+  description:
+    "Appleseed Preschool and Kindergarten - Nurturing young minds for a brighter tomorrow",
 };
 
 export default function RootLayout({
@@ -26,9 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased p-0`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-0`}
+      >
         <Navbar />
-        {children}
+        <div className="pt-16">{children}</div>
       </body>
     </html>
   );
