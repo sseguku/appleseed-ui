@@ -31,7 +31,6 @@ export default function Navbar() {
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
     { label: "Admissions", path: "/admissions" },
-    { label: "Activities", path: "/activities" },
     { label: "Gallery", path: "/gallery" },
     { label: "Contact Us", path: "/contact" },
   ];
@@ -63,7 +62,7 @@ export default function Navbar() {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`px-4 py-2 rounded-md text-base md:text-lg font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors ${
                   pathname === item.path
                     ? "text-white border-b-2 border-[#f78508]"
                     : "text-gray-200 hover:text-white hover:bg-[#f78508]"
@@ -134,7 +133,7 @@ export default function Navbar() {
             <Link
               key={item.path}
               href={item.path}
-              className={`block px-4 py-3 rounded-md text-lg font-medium transition-colors ${
+              className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
                 pathname === item.path
                   ? "bg-primary text-white"
                   : "text-gray-200 hover:bg-primary hover:text-white"
