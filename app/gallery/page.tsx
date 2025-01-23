@@ -82,4 +82,4 @@ export default function Gallery() {
       </main>
     </div>
   );
-} 
+}
