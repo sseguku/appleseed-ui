@@ -46,7 +46,7 @@ export default function Navbar() {
               className="relative h-12 w-auto flex items-center justify-center"
             >
               <Image
-                src="/appleseed_name.png"
+                src="/appleseed_name_v2.png"
                 alt="Appleseed Logo"
                 width={180}
                 height={48}
