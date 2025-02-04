@@ -1,3 +1,10 @@
+import {
+  FaChalkboardTeacher,
+  FaHeadset,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+} from "react-icons/fa";
+
 export default function Contact() {
   return (
     <div>
@@ -28,7 +35,7 @@ export default function Contact() {
             <div className="w-8 h-8 text-[#FFE4B5]/40 text-2xl">★</div>
           </div>
           <div className="absolute top-12 right-1/4">
-            <div className="w-6 h-6 text-white/30 text-xl">★</div>
+            <div className="w-6 h-6 text-white/30 text-sm">★</div>
           </div>
 
           {/* Semi Circles - New Positions */}
@@ -61,7 +68,78 @@ export default function Contact() {
 
       {/* Main Content Section */}
       <main className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 py-12">
-        {/* Add your contact content here */}
+        {/* Contact Info Boxes - Removed redundant max-w-7xl and adjusted padding */}
+        <section className="py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Classroom Sessions Box */}
+            <div className="p-8 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 mb-4 text-primary">
+                  <FaChalkboardTeacher className="w-full h-full" />
+                </div>
+                <h3 className="text-md font-bold mb-4 text-gray-800">
+                  Classroom Sessions
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Monday - Friday
+                  <br />
+                  7:00 am to 1:00 pm
+                </p>
+              </div>
+            </div>
+
+            {/* Address Box */}
+            <div className="p-8 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 mb-4 text-primary">
+                  <FaMapMarkerAlt className="w-full h-full" />
+                </div>
+                <h3 className="text-md font-bold mb-4 text-gray-800">
+                  Our Address
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Seguku Cell 4,
+                  <br />
+                  along Entebbe road. Wakiso district. Uganda
+                </p>
+              </div>
+            </div>
+
+            {/* Phone & Email Box */}
+            <div className="p-8 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 mb-4 text-primary">
+                  <FaPhoneAlt className="w-full h-full" />
+                </div>
+                <h3 className="text-md font-bold mb-4 text-gray-800">
+                  Phone & Email
+                </h3>
+                <p className="text-sm text-gray-600">
+                  +256782707563 | +256703566433
+                  <br />
+                  appleseedug@gmail.com
+                </p>
+              </div>
+            </div>
+
+            {/* Support Box */}
+            <div className="p-8 bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-8 h-8 mb-4 text-primary">
+                  <FaHeadset className="w-full h-full" />
+                </div>
+                <h3 className="text-md font-bold mb-4 text-gray-800">
+                  24/7 Support
+                </h3>
+                <p className="text-sm text-gray-600">
+                  Our Customer Support Team is ready
+                  <br />
+                  and available to help.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
