@@ -141,6 +141,93 @@ export default function Contact() {
           </div>
         </section>
       </main>
+
+      {/* Get in Touch Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get In Touch
+            </h2>
+            <div className="w-16 h-1 bg-primary mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+              We value open communication and are here to assist you. Whether
+              you have questions about our programs, admission process, or would
+              like to schedule a visit, please don't hesitate to reach out to
+              us.
+            </p>
+          </div>
+        </div>
+        {/* Map and Contact Form Section */}
+        <div className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-5 md:px-12 lg:px-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Contact Form - Now First */}
+              <div className="bg-gray-50 p-8 rounded-lg">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name *"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        placeholder="E-mail *"
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Subject *"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <textarea
+                      rows={8}
+                      placeholder="Message"
+                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600 resize-none"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full md:w-auto px-32 py-3 bg-[#69bd45] text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors uppercase"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+
+              {/* Map - Now Second */}
+              <div className="w-full h-[500px] rounded-lg overflow-hidden bg-gray-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.783368322514!2d32.55168317521424!3d0.23982669975781432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d97bf7b9a0d85%3A0xb041c6f4389d0969!2sAppleseed%20Kindergarten%20%26%20Daycare!5e0!3m2!1sen!2sug!4v1739275381272!5m2!1sen!2sug"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Rest of the contact page content */}
     </div>
   );
 }
