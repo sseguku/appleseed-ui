@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import {
   FaChalkboardTeacher,
   FaHeadset,
@@ -6,6 +8,47 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <div>
       {/* Header Section */}
@@ -164,11 +207,14 @@ export default function Contact() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Contact Form - Now First */}
               <div className="bg-gray-50 p-8 rounded-lg">
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <input
                         type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         placeholder="Name *"
                         className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
                         required
@@ -177,6 +223,9 @@ export default function Contact() {
                     <div>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="E-mail *"
                         className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
                         required
@@ -187,6 +236,9 @@ export default function Contact() {
                   <div>
                     <input
                       type="text"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       placeholder="Subject *"
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600"
                       required
@@ -195,18 +247,35 @@ export default function Contact() {
 
                   <div>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       rows={8}
                       placeholder="Message"
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-600 resize-none"
                     ></textarea>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full md:w-auto px-32 py-3 bg-[#69bd45] text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors uppercase"
-                  >
-                    Send Message
-                  </button>
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      disabled={status === "sending"}
+                      className="px-32 py-3 bg-[#69bd45] text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors uppercase disabled:opacity-50"
+                    >
+                      {status === "sending" ? "Sending..." : "Send Message"}
+                    </button>
+                  </div>
+
+                  {status === "success" && (
+                    <p className="text-green-600 text-center">
+                      Message sent successfully!
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className="text-red-600 text-center">
+                      Failed to send message. Please try again.
+                    </p>
+                  )}
                 </form>
               </div>
 
