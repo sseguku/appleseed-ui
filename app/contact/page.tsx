@@ -8,13 +8,6 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
   return (
     <div>
       {/* Header Section */}
@@ -77,7 +70,7 @@ export default function Contact() {
 
       {/* Main Content Section */}
       <main className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 py-12">
-        {/* Contact Info Boxes - Removed redundant max-w-7xl and adjusted padding */}
+        {/* Contact Info Boxes */}
         <section className="py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Classroom Sessions Box */}
@@ -151,7 +144,7 @@ export default function Contact() {
         </section>
       </main>
 
-      {/* Get in Touch Section */}
+      {/* Map Section */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
           <div className="text-center mb-8">
@@ -166,34 +159,22 @@ export default function Contact() {
               us.
             </p>
           </div>
-        </div>
-        {/* Map and Contact Form Section */}
-        <div className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-5 md:px-12 lg:px-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Contact Form - Now First */}
-              <div className="bg-gray-50 p-8 rounded-lg">
-                <h2>Space for form</h2>
-              </div>
 
-              {/* Map - Now Second */}
-              <div className="w-full h-[500px] rounded-lg overflow-hidden bg-gray-100">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.783368322514!2d32.55168317521424!3d0.23982669975781432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d97bf7b9a0d85%3A0xb041c6f4389d0969!2sAppleseed%20Kindergarten%20%26%20Daycare!5e0!3m2!1sen!2sug!4v1739275381272!5m2!1sen!2sug"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+          <div className="mt-12">
+            <div className="w-full h-[500px] rounded-lg overflow-hidden bg-gray-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.783368322514!2d32.55168317521424!3d0.23982669975781432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d97bf7b9a0d85%3A0xb041c6f4389d0969!2sAppleseed%20Kindergarten%20%26%20Daycare!5e0!3m2!1sen!2sug!4v1739275381272!5m2!1sen!2sug"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Rest of the contact page content */}
     </div>
   );
 }
