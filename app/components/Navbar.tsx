@@ -30,8 +30,8 @@ export default function Navbar() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
-    { label: "Admissions", path: "/admissions" },
-    { label: "Gallery", path: "/gallery" },
+    { label: "Programs", path: "/programs" },
+    { label: "Enrollment", path: "/enrollment" },
     { label: "Contact Us", path: "/contact" },
   ];
 
@@ -120,30 +120,28 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-full pointer-events-none"
-        }`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-2 bg-primary-dark shadow-lg">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`block px-4 py-3 rounded-md text-base font-medium transition-colors ${
-                pathname === item.path
-                  ? "bg-primary text-white"
-                  : "text-gray-200 hover:bg-primary hover:text-white"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+      {isMenuOpen && (
+        <div
+          id="mobile-menu"
+          className="absolute top-16 left-0 right-0 bg-primary border-t border-gray-700 md:hidden"
+        >
+          <div className="px-4 pt-2 pb-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`block px-4 py-2 text-base font-medium rounded-md ${
+                  pathname === item.path
+                    ? "text-white bg-[#f78508]"
+                    : "text-gray-200 hover:text-white hover:bg-[#f78508]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 }
