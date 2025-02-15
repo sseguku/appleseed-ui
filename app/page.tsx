@@ -9,6 +9,7 @@ import {
   FaWater,
   FaSwimmer,
 } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Home() {
   const activities = [
@@ -61,6 +62,65 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto">
+      {/* About Us Section */}
+      <section className="py-16 bg-white relative">
+        {/* Striped Background */}
+        <div className="absolute w-[75%] h-full bottom-0 right-0 overflow-hidden">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                -45deg,
+                #EAFAEA,
+                #EAFAEA 3px,
+                #ffffff 3px,
+                #ffffff 10px
+              )`,
+            }}
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image Column */}
+            <div className="relative">
+              <img
+                src="https://i.postimg.cc/mgsTzbVt/morning-circle.jpg"
+                alt="Children learning"
+                className="w-full h-[400px] object-cover rounded-lg shadow-lg relative z-10"
+              />
+            </div>
+
+            {/* Content Column */}
+            <div className="text-left lg:pl-8 relative z-10">
+              <span className="text-sm md:text-base font-medium text-primary mb-2 ">
+                Our Motto
+              </span>
+              <div className="text-base md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
+                For The Future We Prepare
+              </div>
+              <p className="text-xs md:text-sm text-justify text-gray-600 leading-relaxed mb-8">
+                Welcome to Appleseed Preschool and Kindergarten, where
+                curiosity, creativity, and care shape every child’s journey. We
+                nurture young minds in a warm, engaging environment that
+                inspires a lifelong love for learning. With dedicated educators,
+                innovative programs, and personalized attention, we help each
+                child explore, grow, and thrive at their own pace, laying the
+                foundation for a bright future filled with joyful discoveries.
+              </p>
+
+              {/* Read More Button */}
+              <Link
+                href="/about"
+                className="inline-block px-4 py-2 bg-[#ff5722] text-sm text-white font-medium rounded-md hover:bg-[#f4511e] transition-colors"
+              >
+                Read More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Activities Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
