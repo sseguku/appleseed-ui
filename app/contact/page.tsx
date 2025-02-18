@@ -1,5 +1,7 @@
 "use client";
 
+import styles from "../../styles/contact.module.css";
+
 import {
   FaChalkboardTeacher,
   FaHeadset,
@@ -146,21 +148,79 @@ export default function Contact() {
 
       {/* Map Section */}
       <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+        <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16 ">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-2xl font-bold text-gray-900 mb-4">
               Get In Touch
             </h2>
             <div className="w-16 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+            <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base">
               We value open communication and are here to assist you. Whether
               you have questions about our programs, admission process, or would
               like to schedule a visit, please don't hesitate to reach out to
               us.
             </p>
           </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div
+              style={{
+                backgroundImage: `repeating-linear-gradient(
+                -45deg,
+                #EAFAEA,
+                #EAFAEA 3px,
+                #ffffff 3px,
+                #ffffff 10px
+              )`,
+              }}
+            >
+              <img
+                src="https://i.postimg.cc/dt1gR44G/The-Telephone-Is-Your-Best-Friend.jpg"
+                alt="Talk to us"
+                className="w-full h-[600px] object-cover rounded-lg shadow-lg relative "
+              />
+            </div>
+            {/* Form Side */}
+            <div className={styles.formSide}>
+              <form className={styles.contactForm}>
+                <div className={styles.formRow}>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    required
+                    className={styles.input}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                    className={styles.input}
+                  />
+                </div>
+                <input
+                  type="email"
+                  placeholder="Email@yourmail.com"
+                  required
+                  className={styles.input}
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  required
+                  className={styles.input}
+                />
+                <textarea
+                  placeholder="Message"
+                  className={styles.textarea}
+                  rows={6}
+                ></textarea>
+                <button type="submit" className={styles.submitButton}>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
 
-          <div className="mt-12">
+          <div className={"mt-12"}>
             <div className="w-full h-[500px] rounded-lg overflow-hidden bg-gray-100">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.783368322514!2d32.55168317521424!3d0.23982669975781432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d97bf7b9a0d85%3A0xb041c6f4389d0969!2sAppleseed%20Kindergarten%20%26%20Daycare!5e0!3m2!1sen!2sug!4v1739275381272!5m2!1sen!2sug"

@@ -10,6 +10,7 @@ import {
   FaSwimmer,
 } from "react-icons/fa";
 import Link from "next/link";
+import RevolutionSlider from "./components/RevolutionSlider";
 
 export default function Home() {
   const activities = [
@@ -93,12 +94,13 @@ export default function Home() {
 
             {/* Content Column */}
             <div className="text-left lg:pl-8 relative z-10">
-              <span className="text-sm md:text-base font-medium text-primary mb-2 ">
-                Our Motto
+              <span className="font-extrabold	text-xs xs:text-base text-primary mb-2 ">
+                ABOUT THE SCHOOL
               </span>
               <div className="text-base md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
                 For The Future We Prepare
               </div>
+
               <p className="text-xs md:text-sm text-justify text-gray-600 leading-relaxed mb-8">
                 Welcome to Appleseed Preschool and Kindergarten, where
                 curiosity, creativity, and care shape every child’s journey. We

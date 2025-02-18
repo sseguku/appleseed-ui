@@ -24,10 +24,10 @@ export default function Footer() {
     <footer className="bg-[#f1f1f1] pb-0">
       {/* Quick Contact Section */}
       <div className="max-w-7xl mx-auto pt-8 md:pt-12 px-6 md:px-8 lg:px-12">
-        <h3 className="text-2xl md:text-3xl font-bold text-gray-700 text-center mb-3 md:mb-4">
+        <h3 className="text-xl md:text-xl font-bold text-gray-700 text-center mb-3 md:mb-4">
           Quick Contact
         </h3>
-        <p className="text-xs md:text-sm text-gray-600 text-center mb-12 md:mb-16 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-gray-600 text-center mb-12 md:mb-16 max-w-xl mx-auto">
           Get in touch with us for any inquiries about our programs and
           admission process
         </p>
