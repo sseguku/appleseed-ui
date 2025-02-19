@@ -10,7 +10,6 @@ import {
   FaSwimmer,
 } from "react-icons/fa";
 import Link from "next/link";
-import RevolutionSlider from "./components/RevolutionSlider";
 
 export default function Home() {
   const activities = [
