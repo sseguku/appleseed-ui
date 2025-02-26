@@ -10,6 +10,7 @@ import {
   FaSwimmer,
 } from "react-icons/fa";
 import Link from "next/link";
+import Homeslider from "./components/Homeslider";
 
 export default function Home() {
   const activities = [
@@ -61,7 +62,10 @@ export default function Home() {
   ];
 
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className="max-w-7xl py-0 mx-auto">
+      <section className="py-0 bg-primary relative">
+        <Homeslider />
+      </section>
       {/* About Us Section */}
       <section className="py-16 bg-white relative">
         {/* Striped Background */}
@@ -93,8 +97,8 @@ export default function Home() {
 
             {/* Content Column */}
             <div className="text-left lg:pl-8 relative z-10">
-              <span className="font-extrabold	text-xs xs:text-base text-primary mb-2 ">
-                ABOUT THE SCHOOL
+              <span className="font-extrabold	text-bases xs:text-base text-primary mb-2 ">
+                About Us
               </span>
               <div className="text-base md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
                 For The Future We Prepare
@@ -113,7 +117,7 @@ export default function Home() {
               {/* Read More Button */}
               <Link
                 href="/about"
-                className="inline-block px-4 py-2 bg-[#ff5722] text-sm text-white font-medium rounded-md hover:bg-[#f4511e] transition-colors"
+                className="inline-block px-4 py-2 bg-[#ff5722] text-sm text-white font-medium rounded-lg hover:bg-[#f4511e] transition-colors"
               >
                 Read More
               </Link>
@@ -127,13 +131,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Updated Title Section */}
           <div className="text-center mb-12">
-            <h3 className="text-sm md:text-base font-bold text-black mb-1">
+            <h2 className="text-base md:text-base font-bold text-black mb-1">
               Our Activities
-            </h3>
-            <h2 className="text-lg md:text-xl font-extrabold text-[#6E8E59] max-w-3xl mx-auto leading-tight mb-4">
+            </h2>
+            <h1 className="text-lg md:text-xl font-extrabold text-[#6E8E59] max-w-3xl mx-auto leading-tight mb-4">
               Fun, engaging activities spark curiosity, creativity, and lifelong
               learning!
-            </h2>
+            </h1>
             {/* Decorative Line */}
             <div className="w-24 h-1 bg-primary mx-auto"></div>
           </div>
