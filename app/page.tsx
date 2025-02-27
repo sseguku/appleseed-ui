@@ -106,7 +106,7 @@ export default function Home() {
 
               <p className="text-xs md:text-sm text-justify text-gray-600 leading-relaxed mb-8">
                 Welcome to Appleseed Preschool and Kindergarten, where
-                curiosity, creativity, and care shape every child’s journey. We
+                curiosity, creativity, and care shape every child's journey. We
                 nurture young minds in a warm, engaging environment that
                 inspires a lifelong love for learning. With dedicated educators,
                 innovative programs, and personalized attention, we help each
@@ -127,40 +127,157 @@ export default function Home() {
       </section>
 
       {/* Activities Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Updated Title Section */}
           <div className="text-center mb-12">
             <h2 className="text-base md:text-base font-bold text-black mb-1">
               Our Activities
             </h2>
-            <h1 className="text-lg md:text-xl font-extrabold text-[#6E8E59] max-w-3xl mx-auto leading-tight mb-4">
+            <h1 className="text-lg md:text-xl font-extrabold text-white max-w-3xl mx-auto leading-tight mb-4">
               Fun, engaging activities spark curiosity, creativity, and lifelong
               learning!
             </h1>
             {/* Decorative Line */}
-            <div className="w-24 h-1 bg-primary mx-auto"></div>
+            <div className="w-24 h-1 bg-white mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8">
             {activities.map((activity, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-[#EAFAEA] flex items-center justify-center">
-                    <div className="text-primary">{activity.icon}</div>
+                  <div className="w-10 h-10 rounded-full bg-[#ffffff] flex items-center justify-center">
+                    <div className="text-green-500 ">{activity.icon}</div>
                   </div>
                 </div>
                 <div className="text-left">
-                  <h3 className="text-xs md:text-sm font-semibold text-primary mb-0.5">
+                  <h3 className="text-xs md:text-sm font-semibold text-white mb-0.5">
                     {activity.title}
                   </h3>
-                  <p className="text-xs text-gray-600">
-                    {activity.description}
-                  </p>
+                  <p className="text-xs text-white">{activity.description}</p>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+              Why Choose Us
+            </h2>
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <div className="h-[2px] w-12 bg-pink-300"></div>
+              <span className="text-pink-400">♥</span>
+              <div className="h-[2px] w-12 bg-pink-300"></div>
+            </div>
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base mb-12">
+              We have strict criteria when selecting our teachers; they must be
+              native English speakers with higher degrees and most importantly.
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Great Teachers */}
+            <div className="relative group">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
+                  alt="Great Teachers"
+                  className="w-full aspect-square object-cover rounded-lg"
+                />
+                {/* Decorative Elements */}
+                <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-200 rounded-full"></div>
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-pink-200 rounded-full"></div>
+                <div className="absolute top-1/2 -right-3 w-3 h-3 bg-yellow-200 rotate-45"></div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+                GREAT TEACHERS
+              </h3>
+              <p className="text-sm text-gray-600">
+                Rewarding task of instructing young children between the ages of
+                5 and 6 years old
+              </p>
+            </div>
+
+            {/* Delicious Meals */}
+            <div className="relative group">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
+                  alt="Delicious Meals"
+                  className="w-full aspect-square object-cover rounded-lg"
+                />
+                {/* Decorative Elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-200 rounded-full"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-200 rounded-full"></div>
+                <div className="absolute top-1/2 -left-3 w-3 h-3 bg-green-200 rotate-45"></div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+                DELICIOUS MEALS
+              </h3>
+              <p className="text-sm text-gray-600">
+                Healthy meals with balanced nutrition and suitable for each
+                children.
+              </p>
+            </div>
+
+            {/* Excellent Programmes */}
+            <div className="relative group">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+                  alt="Excellent Programmes"
+                  className="w-full aspect-square object-cover rounded-lg"
+                />
+                {/* Decorative Elements */}
+                <div className="absolute -top-2 -left-2 w-4 h-4 bg-yellow-200 rounded-full"></div>
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-200 rounded-full"></div>
+                <div className="absolute top-1/2 -right-3 w-3 h-3 bg-blue-200 rotate-45"></div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+                EXCELLENT PROGRAMMES
+              </h3>
+              <p className="text-sm text-gray-600">
+                The stories, games, quizzes, and worksheets given here are great
+                ways for lesson.
+              </p>
+            </div>
+
+            {/* Satisfied Parents */}
+            <div className="relative group">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1543342384-1f1350e27861"
+                  alt="Satisfied Parents"
+                  className="w-full aspect-square object-cover rounded-lg"
+                />
+                {/* Decorative Elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-200 rounded-full"></div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-200 rounded-full"></div>
+                <div className="absolute top-1/2 -left-3 w-3 h-3 bg-pink-200 rotate-45"></div>
+              </div>
+              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+                SATISFIED PARENTS
+              </h3>
+              <p className="text-sm text-gray-600">
+                Parents are more satisfied with our service and teacher when
+                they choose us.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-10 w-20 h-20 border-2 border-blue-100 rounded-full opacity-50"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 border-2 border-pink-100 rounded-full opacity-50"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border-2 border-yellow-100 rounded-full opacity-30"></div>
         </div>
       </section>
     </main>
