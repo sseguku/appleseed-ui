@@ -21,7 +21,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#f1f1f1] pb-0">
+    <footer className="bg-[#EAFAEA] pb-0">
       {/* Quick Contact Section */}
       <div className="max-w-7xl mx-auto pt-8 md:pt-12 px-6 md:px-8 lg:px-12">
         <h3 className="text-xl md:text-xl font-bold text-gray-700 text-center mb-3 md:mb-4">
@@ -36,7 +36,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-center">
           {/* Location */}
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center mb-2 md:mb-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-2 md:mb-3">
               <FaMapMarkerAlt className="text-white text-xs md:text-base" />
             </div>
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Phone */}
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center mb-2 md:mb-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-2 md:mb-3">
               <FaPhone className="text-white text-xs md:text-base" />
             </div>
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Email */}
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center mb-2 md:mb-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-2 md:mb-3">
               <FaEnvelope className="text-white text-xs md:text-base" />
             </div>
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* School Time */}
           <div className="flex flex-col items-center">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center mb-2 md:mb-3">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-2 md:mb-3">
               <FaClock className="text-white text-xs md:text-base" />
             </div>
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
@@ -97,7 +97,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Section */}
-      <div className="mt-12 md:mt-16 bg-[#3d8a97]">
+      <div className="mt-12 md:mt-16 bg-[#6E8E59]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-4 md:py-6 px-6 md:px-8 lg:px-12">
           <p className="text-xs md:text-sm text-white text-center md:text-left mb-3 md:mb-0">
             Copyright© 2024 Appleseed Schools. All Rights Reserved.

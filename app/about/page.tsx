@@ -46,10 +46,10 @@ export default function About() {
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-8 md:px-12 lg:px-16 py-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-4">
+          <h1 className="text-2xl md:text-2xl lg:text-3xl font-bold text-white text-center mb-4">
             About us
           </h1>
-          <div className="w-16 h-1 bg-white mx-auto"></div>
+          <div className="w-24 h-1 bg-white/20 mx-auto mt-4"></div>
         </div>
       </div>
 

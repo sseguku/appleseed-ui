@@ -98,7 +98,7 @@ export default function Home() {
             {/* Content Column */}
             <div className="text-left lg:pl-8 relative z-10">
               <span className="font-extrabold	text-bases xs:text-base text-primary mb-2 ">
-                About Us
+                Our Story
               </span>
               <div className="text-base md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
                 For The Future We Prepare
@@ -131,7 +131,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Updated Title Section */}
           <div className="text-center mb-12">
-            <h2 className="text-base md:text-base font-bold text-black mb-1">
+            <h2 className="text-base md:text-base font-bold text-orange-500 mb-1">
               Our Activities
             </h2>
             <h1 className="text-lg md:text-xl font-extrabold text-white max-w-3xl mx-auto leading-tight mb-4">
@@ -167,13 +167,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
-              Why Choose Us
+            <h2 className="text-xl md:text-xl font-bold text-green-700 mb-4">
+              What Makes Us Special
             </h2>
             <div className="flex items-center justify-center gap-2 mb-6">
-              <div className="h-[2px] w-12 bg-pink-300"></div>
-              <span className="text-pink-400">♥</span>
-              <div className="h-[2px] w-12 bg-pink-300"></div>
+              <div className="h-[2px] w-12 bg-orange-300"></div>
+              <span className="text-orange-400">♥</span>
+              <div className="h-[2px] w-12 bg-orange-300"></div>
             </div>
             <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base mb-12">
               We have strict criteria when selecting our teachers; they must be
@@ -183,89 +183,103 @@ export default function Home() {
 
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Great Teachers */}
+            {/* Great Teachers - Tilted Square */}
             <div className="relative group">
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
-                  alt="Great Teachers"
-                  className="w-full aspect-square object-cover rounded-lg"
-                />
-                {/* Decorative Elements */}
-                <div className="absolute -top-2 -left-2 w-4 h-4 bg-blue-200 rounded-full"></div>
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-pink-200 rounded-full"></div>
-                <div className="absolute top-1/2 -right-3 w-3 h-3 bg-yellow-200 rotate-45"></div>
+                <div className="relative w-full aspect-square transform rotate-3">
+                  <div className="absolute inset-0 border-4 border-dashed border-orange-300 rounded-lg"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1548449112-96a38a643324"
+                    alt="Great Teachers"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  {/* Blue circle icon */}
+                  <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">✿</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
                 GREAT TEACHERS
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs text-gray-600">
                 Rewarding task of instructing young children between the ages of
                 5 and 6 years old
               </p>
             </div>
 
-            {/* Delicious Meals */}
+            {/* Delicious Meals - Circle */}
             <div className="relative group">
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
-                  alt="Delicious Meals"
-                  className="w-full aspect-square object-cover rounded-lg"
-                />
-                {/* Decorative Elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-pink-200 rounded-full"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-blue-200 rounded-full"></div>
-                <div className="absolute top-1/2 -left-3 w-3 h-3 bg-green-200 rotate-45"></div>
+                <div className="relative w-full aspect-square">
+                  <div className="absolute inset-0 border-4 border-dashed border-pink-300 rounded-full"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
+                    alt="Delicious Meals"
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                  {/* Pink circle icon */}
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-pink-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">🦋</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
-                DELICIOUS MEALS
+              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
+                SMALL CLASS SIZES
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs text-gray-600">
                 Healthy meals with balanced nutrition and suitable for each
                 children.
               </p>
             </div>
 
-            {/* Excellent Programmes */}
+            {/* Excellent Programmes - Tilted Square */}
             <div className="relative group">
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
-                  alt="Excellent Programmes"
-                  className="w-full aspect-square object-cover rounded-lg"
-                />
-                {/* Decorative Elements */}
-                <div className="absolute -top-2 -left-2 w-4 h-4 bg-yellow-200 rounded-full"></div>
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-200 rounded-full"></div>
-                <div className="absolute top-1/2 -right-3 w-3 h-3 bg-blue-200 rotate-45"></div>
+                <div className="relative w-full aspect-square transform -rotate-3">
+                  <div className="absolute inset-0 border-2 border-dashed border-green-300 rounded-lg"></div>
+                  <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+                    alt="Excellent Programmes"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  {/* Green circle icon */}
+                  <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">🍎</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
                 EXCELLENT PROGRAMMES
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs text-gray-600">
                 The stories, games, quizzes, and worksheets given here are great
                 ways for lesson.
               </p>
             </div>
 
-            {/* Satisfied Parents */}
+            {/* Satisfied Parents - Triangle */}
             <div className="relative group">
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1543342384-1f1350e27861"
-                  alt="Satisfied Parents"
-                  className="w-full aspect-square object-cover rounded-lg"
-                />
-                {/* Decorative Elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-200 rounded-full"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-200 rounded-full"></div>
-                <div className="absolute top-1/2 -left-3 w-3 h-3 bg-pink-200 rotate-45"></div>
+                <div className="relative w-full aspect-square">
+                  <div className="absolute inset-0 border-2 border-dashed border-yellow-300 clip-triangle"></div>
+                  <div className="relative w-full h-full overflow-hidden clip-triangle">
+                    <img
+                      src="https://images.unsplash.com/photo-1543342384-1f1350e27861"
+                      alt="Satisfied Parents"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Yellow circle icon */}
+                  <div className="absolute -bottom-4 right-1/2 transform translate-x-1/2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xl">🎮</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mt-4 mb-2">
+              <h3 className="text-sm font-bold text-green-800 mt-6 mb-2">
                 SATISFIED PARENTS
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs text-gray-600">
                 Parents are more satisfied with our service and teacher when
                 they choose us.
               </p>
