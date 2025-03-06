@@ -162,29 +162,97 @@ export default function Home() {
             ))}
           </div>
         </div>
+        {/* View All Programs Link */}
+        <div className="text-center mt-12">
+          <Link
+            href="/programs"
+            className="inline-flex items-center px-6 py-3 bg-white text-green-600 rounded-lg hover:bg-primary-dark transition-colors group"
+          >
+            View All Programs
+            <svg
+              className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+        </div>
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Contact-style Decorative Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Circles */}
+          <div className="absolute top-4 right-8">
+            <div className="w-16 h-16 border-4 border-[#CAE0BC] rounded-full opacity-60" />
+          </div>
+          <div className="absolute bottom-8 left-12">
+            <div className="w-24 h-24 border-4 border-[#E8F3E2] rounded-full opacity-70" />
+          </div>
+
+          {/* Shapes */}
+          <div className="absolute top-12 left-1/4">
+            <div className="w-12 h-12 bg-[#CAE0BC] rounded-full opacity-50" />
+          </div>
+          <div className="absolute bottom-16 right-1/3">
+            <div className="w-20 h-20 bg-[#E8F3E2] transform rotate-45 opacity-60" />
+          </div>
+          <div className="absolute top-20 right-1/4">
+            <div className="w-16 h-16 bg-[#CAE0BC] rounded-full opacity-40" />
+          </div>
+
+          {/* Additional Elements */}
+          <div className="absolute top-32 left-1/3">
+            <div className="w-10 h-10 bg-[#E8F3E2] transform rotate-12 opacity-50" />
+          </div>
+          <div className="absolute bottom-24 right-1/5">
+            <div className="w-14 h-14 border-4 border-[#CAE0BC] rounded-full opacity-60" />
+          </div>
+
+          {/* Dots Pattern */}
+          <div className="absolute top-1/4 right-1/4 flex gap-3">
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-60"></div>
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-60"></div>
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-60"></div>
+          </div>
+
+          {/* Curved Lines */}
+          <div className="absolute bottom-1/3 left-1/4">
+            <div className="w-20 h-20 border-t-4 border-r-4 border-[#E8F3E2] rounded-tr-full opacity-50"></div>
+          </div>
+          <div className="absolute top-1/4 right-1/3">
+            <div className="w-16 h-16 border-b-4 border-l-4 border-[#CAE0BC] rounded-bl-full opacity-50"></div>
+          </div>
+
+          {/* Plus Signs */}
+          <div className="absolute bottom-20 left-1/3 text-[#CAE0BC] text-4xl opacity-50">
+            +
+          </div>
+          <div className="absolute top-1/3 right-1/4 text-[#E8F3E2] text-4xl opacity-60">
+            +
+          </div>
+        </div>
+
+        {/* Content Container */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-xl md:text-xl font-bold text-green-700 mb-4">
               What Makes Us Special
             </h2>
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <div className="h-[2px] w-12 bg-orange-300"></div>
-              <span className="text-orange-400">♥</span>
-              <div className="h-[2px] w-12 bg-orange-300"></div>
-            </div>
-            <p className="text-xs md:text-sm  text-gray-600 max-w-3xl mx-auto sm:text-base mb-12">
-              At Appleseed Preschool & Kindergarten, we provide a nurturing,
-              play-based learning environment enriched with a dynamic
-              curriculum, passionate educators, engaging extracurricular
-              activities, strong parent partnerships, cultural and moral values,
-              cutting-edge technology, and a safe, child-friendly space—ensuring
-              a strong foundation for lifelong learning and holistic
-              development.
+            <p className="text-xs md:text-sm text-center text-gray-600 leading-relaxed mb-4 w-3/4 mx-auto">
+              Appleseed Preschool & Kindergarten offers a nurturing, play-based
+              learning environment with a rich curriculum, passionate teachers,
+              engaging activities, and a safe, child-friendly space—building a
+              strong foundation for lifelong learning.
             </p>
           </div>
 
@@ -248,7 +316,7 @@ export default function Home() {
             <div className="relative group max-w-[220px] mx-auto w-full">
               <div className="relative">
                 <div className="relative w-full aspect-square transform -rotate-3">
-                  <div className="absolute inset-0 border-4 border-dashed border-green-700 rounded-lg"></div>
+                  <div className="absolute inset-0 border-4 border-dashed border-green-600 rounded-lg"></div>
                   <Image
                     src={programHome}
                     alt="Great Teachers"
@@ -261,7 +329,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-green-700 mt-4 mb-2">
+              <h3 className="text-sm font-bold text-green-600 mt-4 mb-2">
                 EXCELLENT PROGRAMMES
               </h3>
               <p className="text-xs text-gray-600">
@@ -297,13 +365,29 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Background Decorative Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-10 w-20 h-20 border-2 border-blue-100 rounded-full opacity-50"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 border-2 border-pink-100 rounded-full opacity-50"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 border-2 border-yellow-100 rounded-full opacity-30"></div>
+          {/* Added Enrollment Link */}
+          <div className="text-center mt-12">
+            <Link
+              href="/enrollment"
+              className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-green-700 transition-colors group"
+            >
+              Begin Your Child's Journey
+              <svg
+                className="ml-3 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </main>

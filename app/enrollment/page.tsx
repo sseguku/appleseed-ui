@@ -9,7 +9,7 @@ export default function Enrollment() {
   const whyChoosePoints = [
     {
       title: "Experienced Teachers",
-      description: "Native English-speaking educators with advanced degrees",
+      description: "Passionate, Patient, Skilled, and Nurturing",
     },
     {
       title: "Holistic Development",
@@ -17,11 +17,13 @@ export default function Enrollment() {
     },
     {
       title: "Safe Environment",
-      description: "Secure, nurturing space for learning and development",
+      description:
+        "A safe, clean, supervised, and child-friendly learning space.",
     },
     {
       title: "Small Class Sizes",
-      description: "Personalized attention for each student",
+      description:
+        "Personalized learning with focused attention for every child.",
     },
   ];
 
@@ -178,7 +180,7 @@ export default function Enrollment() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-[#6E8E59] mb-2">
               Why Choose Appleseed
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
@@ -192,11 +194,13 @@ export default function Enrollment() {
             {whyChoosePoints.map((point, index) => (
               <div
                 key={index}
-                className="text-center p-4 rounded-lg border border-gray-100 hover:shadow-sm transition-shadow"
+                className="text-center bg-primary p-4 rounded-lg border border-gray-100 hover:shadow-sm transition-shadow"
               >
-                <FaCheckCircle className="text-primary text-2xl mx-auto mb-3" />
-                <h3 className="text-lg font-semibold mb-1">{point.title}</h3>
-                <p className="text-sm text-gray-600">{point.description}</p>
+                <FaCheckCircle className="text-[#EAFAEA] text-2xl mx-auto mb-3" />
+                <h3 className="text-lg text-white font-semibold mb-1">
+                  {point.title}
+                </h3>
+                <p className="text-sm text-[#EAFAEA]">{point.description}</p>
               </div>
             ))}
           </div>
@@ -207,7 +211,7 @@ export default function Enrollment() {
       <section className="py-12 bg-[#CAE0BC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-primary-dark mb-2">
               Enrollment Process
             </h2>
             <p className="text-sm text-gray-600 max-w-2xl mx-auto">
@@ -247,10 +251,69 @@ export default function Enrollment() {
       </section>
 
       {/* Tuition & Fees Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-white relative">
+        {/* Decorative Background Shapes */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Circles */}
+          <div className="absolute top-8 right-12">
+            <div className="w-20 h-20 border-8 border-[#CAE0BC] rounded-full opacity-60" />
+          </div>
+          <div className="absolute bottom-12 left-16">
+            <div className="w-28 h-28 border-6 border-[#CAE0BC] rounded-full opacity-50" />
+          </div>
+
+          {/* Stars */}
+          <div className="absolute top-1/4 right-1/4 text-4xl text-[#CAE0BC] opacity-40">
+            ★
+          </div>
+          <div className="absolute bottom-1/3 left-1/3 text-3xl text-[#CAE0BC] opacity-45">
+            ★
+          </div>
+
+          {/* Squares */}
+          <div className="absolute top-16 left-1/4">
+            <div className="w-16 h-16 bg-[#CAE0BC] opacity-25 transform rotate-45" />
+          </div>
+          <div className="absolute bottom-20 right-1/3">
+            <div className="w-12 h-12 bg-[#CAE0BC] opacity-30 transform -rotate-12" />
+          </div>
+
+          {/* Semi Circles */}
+          <div className="absolute top-1/3 right-16">
+            <div className="w-24 h-12 border-8 border-[#CAE0BC] rounded-t-full opacity-40" />
+          </div>
+          <div className="absolute bottom-1/4 left-20">
+            <div className="w-16 h-8 border-8 border-[#CAE0BC] rounded-b-full opacity-45" />
+          </div>
+
+          {/* Dots Pattern */}
+          <div className="absolute top-20 right-1/3 flex gap-3">
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-50"></div>
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-50"></div>
+            <div className="w-3 h-3 bg-[#CAE0BC] rounded-full opacity-50"></div>
+          </div>
+
+          {/* Small Decorative Elements */}
+          <div className="absolute bottom-16 right-1/4 text-3xl text-[#CAE0BC] opacity-40">
+            +
+          </div>
+          <div className="absolute top-1/2 left-12 text-2xl text-[#CAE0BC] opacity-45">
+            ×
+          </div>
+
+          {/* Curved Lines */}
+          <div className="absolute top-1/4 left-1/3">
+            <div className="w-16 h-16 border-4 border-[#CAE0BC] rounded-tr-full opacity-40"></div>
+          </div>
+          <div className="absolute bottom-1/3 right-1/4">
+            <div className="w-12 h-12 border-4 border-[#CAE0BC] rounded-bl-full opacity-45"></div>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-primary-dark mb-2">
               Tuition & Fees
             </h2>
             <p className="text-sm text-gray-600">Academic Year 2024/2025</p>
@@ -306,7 +369,7 @@ export default function Enrollment() {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-2xl font-bold text-primary-dark mb-2">
               Frequently Asked Questions
             </h2>
             <p className="text-sm text-gray-600">
@@ -317,7 +380,7 @@ export default function Enrollment() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="text-base font-semibold text-gray-900 mb-2">
+                <h3 className="text-base font-semibold text-[#6E8E59] mb-2">
                   {faq.question}
                 </h3>
                 <p className="text-sm text-gray-600">{faq.answer}</p>
