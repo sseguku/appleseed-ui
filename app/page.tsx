@@ -11,6 +11,12 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import Homeslider from "./components/Homeslider";
+import Image from "next/image";
+import mCircle from "@/public/morning_circle.jpg";
+import homeClass from "@/public/classes_v1.jpg";
+import parentHome from "@/public/parents_v1.jpg";
+import teacherHome from "@/public/teachers_v2.jpg";
+import programHome from "@/public/programs_v1.jpg";
 
 export default function Home() {
   const activities = [
@@ -87,12 +93,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Column */}
-            <div className="relative">
-              <img
-                src="https://i.postimg.cc/mgsTzbVt/morning-circle.jpg"
-                alt="Children learning"
-                className="w-full h-[400px] object-cover rounded-lg shadow-lg relative z-10"
-              />
+            <div className="relative z-10 rounded-xl object-cover w-[700px] h-[350px]">
+              <Image src={mCircle} alt="Morning Circle" />
             </div>
 
             {/* Content Column */}
@@ -175,31 +177,37 @@ export default function Home() {
               <span className="text-orange-400">♥</span>
               <div className="h-[2px] w-12 bg-orange-300"></div>
             </div>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm md:text-base mb-12">
-              We have strict criteria when selecting our teachers; they must be
-              native English speakers with higher degrees and most importantly.
+            <p className="text-xs md:text-sm  text-gray-600 max-w-3xl mx-auto sm:text-base mb-12">
+              At Appleseed Preschool & Kindergarten, we provide a nurturing,
+              play-based learning environment enriched with a dynamic
+              curriculum, passionate educators, engaging extracurricular
+              activities, strong parent partnerships, cultural and moral values,
+              cutting-edge technology, and a safe, child-friendly space—ensuring
+              a strong foundation for lifelong learning and holistic
+              development.
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Great Teachers - Tilted Square */}
-            <div className="relative group">
+            <div className="relative group max-w-[220px] mx-auto w-full">
               <div className="relative">
                 <div className="relative w-full aspect-square transform rotate-3">
                   <div className="absolute inset-0 border-4 border-dashed border-orange-300 rounded-lg"></div>
-                  <img
-                    src="https://images.unsplash.com/photo-1548449112-96a38a643324"
+                  <Image
+                    src={teacherHome}
                     alt="Great Teachers"
                     className="w-full h-full object-cover rounded-lg"
                   />
+
                   {/* Blue circle icon */}
-                  <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">✿</span>
+                  <div className="absolute -bottom-3 -left-3 w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-lg">✿</span>
                   </div>
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
+              <h3 className="text-sm font-bold text-orange-400 mt-4 mb-2">
                 GREAT TEACHERS
               </h3>
               <p className="text-xs text-gray-600">
@@ -209,22 +217,25 @@ export default function Home() {
             </div>
 
             {/* Delicious Meals - Circle */}
-            <div className="relative group">
+            <div className="relative group max-w-[220px] mx-auto w-full">
               <div className="relative">
                 <div className="relative w-full aspect-square">
-                  <div className="absolute inset-0 border-4 border-dashed border-pink-300 rounded-full"></div>
-                  <img
-                    src="https://images.unsplash.com/photo-1594708767771-a7502209ff51"
-                    alt="Delicious Meals"
-                    className="w-full h-full object-cover rounded-full"
-                  />
+                  <div className="absolute inset-0 border-4 border-dashed border-red-500 rounded-full"></div>
+                  <div className="w-full h-full object-cover rounded-full">
+                    <Image
+                      src={homeClass}
+                      alt="classes"
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+
                   {/* Pink circle icon */}
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-pink-400 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">🦋</span>
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-lg">🦋</span>
                   </div>
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
+              <h3 className="text-sm font-bold text-red-500 mt-4 mb-2">
                 SMALL CLASS SIZES
               </h3>
               <p className="text-xs text-gray-600">
@@ -234,22 +245,23 @@ export default function Home() {
             </div>
 
             {/* Excellent Programmes - Tilted Square */}
-            <div className="relative group">
+            <div className="relative group max-w-[220px] mx-auto w-full">
               <div className="relative">
                 <div className="relative w-full aspect-square transform -rotate-3">
-                  <div className="absolute inset-0 border-2 border-dashed border-green-300 rounded-lg"></div>
-                  <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
-                    alt="Excellent Programmes"
+                  <div className="absolute inset-0 border-4 border-dashed border-green-700 rounded-lg"></div>
+                  <Image
+                    src={programHome}
+                    alt="Great Teachers"
                     className="w-full h-full object-cover rounded-lg"
                   />
+
                   {/* Green circle icon */}
-                  <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">🍎</span>
+                  <div className="absolute -bottom-3 -right-3 w-10 h-10 bg-green-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-lg">🍎</span>
                   </div>
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-green-700 mt-6 mb-2">
+              <h3 className="text-sm font-bold text-green-700 mt-4 mb-2">
                 EXCELLENT PROGRAMMES
               </h3>
               <p className="text-xs text-gray-600">
@@ -258,25 +270,25 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Satisfied Parents - Triangle */}
-            <div className="relative group">
+            {/* Satisfied Parents - Changed to Circle */}
+            <div className="relative group max-w-[220px] mx-auto w-full">
               <div className="relative">
                 <div className="relative w-full aspect-square">
-                  <div className="absolute inset-0 border-2 border-dashed border-yellow-300 clip-triangle"></div>
-                  <div className="relative w-full h-full overflow-hidden clip-triangle">
-                    <img
-                      src="https://images.unsplash.com/photo-1543342384-1f1350e27861"
+                  <div className="absolute inset-0 border-4 border-dashed border-blue-400 rounded-full"></div>
+                  <div className="w-full h-full object-cover rounded-full overflow-hidden">
+                    <Image
+                      src={parentHome}
                       alt="Satisfied Parents"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  {/* Yellow circle icon */}
-                  <div className="absolute -bottom-4 right-1/2 transform translate-x-1/2 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xl">🎮</span>
+                  {/* Yellow circle icon - Repositioned like Small Class Sizes */}
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
+                    <span className="text-white text-lg">🤝</span>
                   </div>
                 </div>
               </div>
-              <h3 className="text-sm font-bold text-green-800 mt-6 mb-2">
+              <h3 className="text-sm font-bold text-blue-400 mt-4 mb-2">
                 SATISFIED PARENTS
               </h3>
               <p className="text-xs text-gray-600">

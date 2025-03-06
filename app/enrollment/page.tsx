@@ -1,8 +1,6 @@
 import {
   FaGraduationCap,
   FaCheckCircle,
-  FaRegClock,
-  FaUserFriends,
   FaFileAlt,
   FaCalendarAlt,
 } from "react-icons/fa";
