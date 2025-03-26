@@ -505,7 +505,7 @@ export default function Home() {
                   the pool remains accessible to the public.
                 </p>
                 <p className="font-medium text-primary">
-                  Come and enjoy a refreshing swim in a safe and family-friendly
+                  Come & enjoy a refreshing swim in a safe and family-friendly
                   environment!
                 </p>
               </div>
