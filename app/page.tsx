@@ -13,6 +13,14 @@ import {
   FaMoneyBillWave,
   FaCalendarAlt,
   FaGraduationCap,
+  FaSchool,
+  FaUserGraduate,
+  FaStar,
+  FaPalette,
+  FaUtensils,
+  FaShieldAlt,
+  FaHeart,
+  FaFutbol,
 } from "react-icons/fa";
 import Link from "next/link";
 import Homeslider from "./components/Homeslider";
@@ -126,7 +134,7 @@ export default function Home() {
                 href="/about"
                 className="inline-block px-4 py-2 bg-[#ff5722] text-sm text-white font-medium rounded-lg hover:bg-[#f4511e] transition-colors"
               >
-                Read More
+                More About Us
               </Link>
             </div>
           </div>
@@ -566,6 +574,99 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-primary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-white mb-2">
+              Our Impact in Numbers
+            </h2>
+            <div className="w-20 h-1 bg-[#f78508] mx-auto"></div>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {/* Student Success */}
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaUserGraduate className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">150+</p>
+              <p className="text-xs text-white/80 text-center">
+                Students Enrolled
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaUsers className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">12:1</p>
+              <p className="text-xs text-white/80 text-center">
+                Student-Teacher Ratio
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaStar className="w-5 h-5 text-[#f78508]" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">95%</p>
+              <p className="text-xs text-white/80 text-center">
+                Kindergarten Readiness
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaGraduationCap className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">100%</p>
+              <p className="text-xs text-white/80 text-center">
+                Qualified Teachers
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaUtensils className="w-5 h-5 text-[#f78508]" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">100%</p>
+              <p className="text-xs text-white/80 text-center">Healthy Meals</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaShieldAlt className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">24/7</p>
+              <p className="text-xs text-white/80 text-center">
+                Security Coverage
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaHeart className="w-5 h-5 text-[#f78508]" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">98%</p>
+              <p className="text-xs text-white/80 text-center">
+                Parent Satisfaction
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:bg-white/15 transition-colors">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4">
+                <FaFutbol className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-lg font-bold text-white mb-1">4+</p>
+              <p className="text-xs text-white/80 text-center">Sports Teams</p>
             </div>
           </div>
         </div>
