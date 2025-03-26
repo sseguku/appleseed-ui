@@ -42,10 +42,8 @@ export default function Footer() {
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
               Our Location
             </h3>
-            <p className="text-xs md:text-sm text-gray-600">
-              Seguku Cell 4 along Entebbe Road
-              <br />
-              Wakiso District, Uganda
+            <p className="text-left text-xs md:text-sm text-gray-600">
+              Seguku Cell 4 along Entebbe Road, Wakiso District, Uganda
             </p>
           </div>
 
@@ -72,10 +70,8 @@ export default function Footer() {
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
               Email ID
             </h3>
-            <p className="text-xs md:text-sm text-gray-600">
-              appleseedug@gmail.com
-              <br />
-              info@appleseedschools.com
+            <p className="text-left text-xs md:text-sm text-gray-600">
+              appleseedug@gmail.org info@appleseedschools.org
             </p>
           </div>
 
@@ -87,10 +83,10 @@ export default function Footer() {
             <h3 className="text-xs md:text-sm font-semibold text-gray-700 mb-1 md:mb-2">
               School Time
             </h3>
-            <p className="text-xs md:text-sm text-gray-600">
-              8am to 5pm, Mon to Fri
+            <p className="text-left text-xs md:text-sm text-black">
+              Mon-Thur: <strong>7am - 3pm</strong>
               <br />
-              9am to 1am sat
+              Fri: <strong>7am - 1pm</strong>
             </p>
           </div>
         </div>

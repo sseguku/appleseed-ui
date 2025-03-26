@@ -498,9 +498,13 @@ export default function Home() {
 
             {/* Content Column */}
             <div>
-              <h2 className="text-2xl font-bold text-green-700 mb-6">
-                Swimming Pool Access
-              </h2>
+              <div className="text-center mb-10">
+                <h2 className="text-2xl font-bold text-green-700 mb-6">
+                  Swimming Pool Access
+                </h2>
+                <div className="w-20 h-1 bg-green-700 mx-auto"></div>
+              </div>
+
               <div className="prose prose-sm text-xs md:text-sm text-justify text-gray-600">
                 <p className="mb-4">
                   Our swimming pool is an exclusive facility for Appleseed
