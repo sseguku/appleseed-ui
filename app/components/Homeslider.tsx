@@ -25,8 +25,8 @@ export default function Homeslider() {
       className="h-96 w-full  "
     >
       <SwiperSlide className="bg-primary">slide 1</SwiperSlide>
-      <SwiperSlide>slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide className="bg-orange-500">slide 2</SwiperSlide>
+      <SwiperSlide className="bg-green-500">Slide 3</SwiperSlide>
     </Swiper>
   );
 }

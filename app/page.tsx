@@ -8,6 +8,11 @@ import {
   FaGamepad,
   FaWater,
   FaSwimmer,
+  FaClock,
+  FaUsers,
+  FaMoneyBillWave,
+  FaCalendarAlt,
+  FaGraduationCap,
 } from "react-icons/fa";
 import Link from "next/link";
 import Homeslider from "./components/Homeslider";
@@ -17,7 +22,7 @@ import homeClass from "@/public/classes_v1.jpg";
 import parentHome from "@/public/parents_v1.jpg";
 import teacherHome from "@/public/teachers_v2.jpg";
 import programHome from "@/public/programs_v1.jpg";
-
+import poolImage from "@/public/children_swim.jpg";
 export default function Home() {
   const activities = [
     {
@@ -102,7 +107,7 @@ export default function Home() {
               <span className="font-extrabold	text-bases xs:text-base text-primary mb-2 ">
                 Our Story
               </span>
-              <div className="text-base md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
+              <div className="text-lg md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
                 For The Future We Prepare
               </div>
 
@@ -387,6 +392,181 @@ export default function Home() {
                 />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Swimming Pool Access Section */}
+      <section className="py-16 bg-[#f7fbff] relative overflow-hidden">
+        {/* Decorative Water-themed Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Wave Patterns */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-32 opacity-10"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 25 0, 50 10 T 100 10' stroke='%234299e1' fill='none' stroke-width='2'/%3E%3C/svg%3E")`,
+              backgroundRepeat: "repeat-x",
+            }}
+          ></div>
+
+          {/* Bubble Elements */}
+          <div className="absolute top-8 right-12">
+            <div className="w-16 h-16 border-4 border-[#4299e1]/20 rounded-full"></div>
+          </div>
+          <div className="absolute bottom-12 left-16">
+            <div className="w-12 h-12 border-2 border-[#4299e1]/30 rounded-full"></div>
+          </div>
+          <div className="absolute top-1/3 right-1/4">
+            <div className="w-8 h-8 border-2 border-[#4299e1]/20 rounded-full"></div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image Column - Updated Design */}
+            <div className="relative max-w-md mx-auto lg:max-w-lg">
+              {/* Main Image Container */}
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg transform hover:scale-[1.02] transition-transform">
+                <div className="relative w-full h-full">
+                  <Image
+                    src={poolImage}
+                    alt="Swimming Pool"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+                    {/* Info Tags */}
+                    <div className="absolute bottom-6 left-6 flex flex-wrap gap-3">
+                      <div className="flex items-center bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                        <FaClock className="text-primary w-3.5 h-3.5 mr-2" />
+                        <span className="text-xs font-medium text-gray-800">
+                          Mon-Fri
+                        </span>
+                      </div>
+                      <div className="flex items-center bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                        <FaUsers className="text-primary w-3.5 h-3.5 mr-2" />
+                        <span className="text-xs font-medium text-gray-800">
+                          Public Welcome
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature Cards - Updated Design */}
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="bg-white/95 p-4 rounded-xl shadow-sm border border-blue-50 hover:border-blue-100 transition-colors">
+                  <div className="flex items-center mb-2">
+                    <div className="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center">
+                      <FaCalendarAlt className="text-blue-500 w-4 h-4" />
+                    </div>
+                    <h4 className="ml-2  text-xs md:text-xstext-left font-semibold text-gray-800">
+                      School Days
+                    </h4>
+                  </div>
+                  <p className="text-xs text-gray-600">
+                    Exclusive access for students
+                  </p>
+                </div>
+                <div className="bg-white/95 p-4 rounded-xl shadow-sm border border-green-50 hover:border-green-100 transition-colors">
+                  <div className="flex items-center mb-2">
+                    <div className="w-8 h-8 bg-green-50 rounded-full flex items-center justify-center">
+                      <FaMoneyBillWave className="text-green-500 w-4 h-4" />
+                    </div>
+                    <h4 className="ml-2  text-xs md:text-xs  text-left font-semibold text-gray-800">
+                      Public Access
+                    </h4>
+                  </div>
+                  <p className="text-xs text-gray-600">UGX 10,000 per person</p>
+                </div>
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-blue-50/50 via-transparent to-green-50/30 rounded-full blur-3xl"></div>
+            </div>
+
+            {/* Content Column */}
+            <div>
+              <h2 className="text-2xl font-bold text-green-700 mb-6">
+                Swimming Pool Access
+              </h2>
+              <div className="prose prose-sm text-xs md:text-sm text-justify text-gray-600">
+                <p className="mb-4">
+                  Our swimming pool is an exclusive facility for Appleseed
+                  Preschool and Kindergarten students during school days (Monday
+                  to Friday).
+                </p>
+                <p className="mb-4">
+                  On weekends, the pool is open to the public at a fee of
+                  Ushs.10,000 per person. Additionally, during school holidays,
+                  the pool remains accessible to the public.
+                </p>
+                <p className="font-medium text-primary">
+                  Come and enjoy a refreshing swim in a safe and family-friendly
+                  environment!
+                </p>
+              </div>
+
+              {/* Schedule Cards */}
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-blue-100">
+                  <h3 className="text-left text-sm font-semibold text-primary mb-2">
+                    School Time
+                  </h3>
+                  <ul className="space-y-2 text-xs text-gray-600">
+                    <li className="flex items-center">
+                      <FaClock className="w-4 h-4 text-blue-400 mr-2" />
+                      Monday - Friday
+                    </li>
+                    <li className="flex items-center">
+                      <FaGraduationCap className="w-4 h-4 text-blue-400 mr-2" />
+                      Students Only
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white p-4 rounded-lg shadow-sm border border-green-100">
+                  <h3 className=" text-left text-sm font-semibold text-primary mb-2">
+                    Public Access
+                  </h3>
+                  <ul className="space-y-2 text-xs text-gray-600">
+                    <li className="flex items-center">
+                      <FaCalendarAlt className="w-4 h-4 text-green-400 mr-2" />
+                      Weekends & Holidays
+                    </li>
+                    <li className="flex items-center">
+                      <FaMoneyBillWave className="w-4 h-4 text-green-400 mr-2" />
+                      UGX 10,000 per person
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Book Now Button - Made Full Width */}
+              <div className="mt-8">
+                <Link
+                  href="/contact"
+                  className="group w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
+                >
+                  Book Pool Now
+                  <svg
+                    className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
