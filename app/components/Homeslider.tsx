@@ -13,7 +13,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
-import { useRef } from "react";
+
 
 // School data array
 const schoolData = [
