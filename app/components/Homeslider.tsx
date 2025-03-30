@@ -10,11 +10,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
+import { useRef } from "react";
 
-// Product data array
-const productData = [
+// School data array
+const schoolData = [
   {
     id: 1,
 
@@ -37,7 +39,7 @@ const productData = [
       "Through fun-filled activities and hands-on learning, we engage little minds in purposeful play. Every day is an opportunity to explore, create, and grow in ways that prepare them for a bright future.",
     buttonText: "Explore Our Programs",
     buttonLink: "/programs",
-    image: "/faces_up.png",
+    image: "/children_slid.png",
     imageAlt: "Our Programs",
     background: "bg-gradient-to-br from-green-100 to-yellow-200",
     bgColor: "bg-yellow-300",
@@ -89,124 +91,149 @@ const productData = [
 ];
 
 export default function Homeslider() {
+  const paginationRef = useRef<HTMLDivElement>(null);
+
   return (
-    <Swiper
-      pagination={{
-        clickable: true,
-        type: "fraction",
-        formatFractionCurrent: (number) =>
-          number < 10 ? `0${number}` : number,
-        formatFractionTotal: (number) => (number < 10 ? `0${number}` : number),
-        renderFraction: (currentClass, totalClass) => {
-          return `<span class="${currentClass}"></span> <span class="swiper-pagination-separator"></span> <span class="${totalClass}"></span>`;
-        },
-      }}
-      navigation={true}
-      loop={true}
-      keyboard={{
-        enabled: true,
-      }}
-      autoplay={{
-        delay: 10000,
-        disableOnInteraction: false,
-      }}
-      modules={[Navigation, Pagination, Autoplay]}
-      className="h-screen w-full relative"
-    >
-      {productData.map((product) => (
-        <SwiperSlide key={product.id} className={product.background}>
-          <div className="relative w-full h-full flex">
-            {/* Social Icons */}
-            <div className="absolute right-8 z-10 top-1/2 -translate-y-1/2 flex flex-col gap-6">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <FaFacebookF className="text-gray-800" />
+    <div className="relative">
+      <Swiper
+        pagination={{
+          el: ".swiper-pagination-bullets",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return `<span class="${className}"></span>`;
+          },
+        }}
+        onBeforeInit={(swiper) => {
+          // Make sure pagination exists before trying to customize it
+          if (
+            swiper.params.pagination &&
+            typeof swiper.params.pagination !== "boolean"
+          ) {
+            swiper.params.pagination.el = ".swiper-pagination-bullets";
+          }
+        }}
+        navigation={true}
+        loop={true}
+        keyboard={{
+          enabled: true,
+        }}
+        autoplay={{
+          delay: 10000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
+        className="h-screen w-full relative"
+      >
+        {schoolData.map((slide) => (
+          <SwiperSlide key={slide.id} className={slide.background}>
+            <div className="relative w-full h-full flex">
+              {/* Social Icons */}
+              <div className="absolute right-8 z-10 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                  <FaFacebookF className="text-gray-800" />
+                </div>
+                <a
+                  href="https://x.com/AppleseedUg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                >
+                  <FaXTwitter className="text-gray-800" />
+                </a>
+                <a
+                  href="https://www.youtube.com/@appleseedkindergartendaycare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white rounded-full flex items-center justify-center"
+                >
+                  <FaYoutube className="text-gray-800" />
+                </a>
               </div>
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <FaInstagram className="text-gray-800" />
-              </div>
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <FaYoutube className="text-gray-800" />
-              </div>
-            </div>
 
-            {/* Page Number */}
-            <div className="absolute bottom-8 right-8 text-xl font-medium">
-              <span>{product.id < 10 ? `0${product.id}` : product.id}</span>
-              <div className="w-6 h-px bg-gray-400 mx-2 inline-block"></div>
-              <span className="text-gray-400">05</span>
-            </div>
+              {/* Page Number on right side */}
+              <div className="absolute bottom-8 right-8 text-xl font-medium">
+                <span>{slide.id < 10 ? `0${slide.id}` : slide.id}</span>
+                <div className="w-6 h-px bg-gray-400 mx-2 inline-block"></div>
+                <span className="text-gray-400">05</span>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto px-8">
-              {/* Left Content */}
-              <div className="flex flex-col justify-center">
-                {/* Vertical Text */}
-                {/* <div className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 transform -rotate-90 origin-left">
-                  <p className="text-gray-500 uppercase tracking-wider text-xs whitespace-nowrap">
-                    {product.verticalText}
+              <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl mx-auto px-8">
+                {/* Left Content */}
+                <div className="flex flex-col justify-center">
+                  {/* Title */}
+                  <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight whitespace-pre-line">
+                    {slide.title}
+                  </h1>
+
+                  {/* Description */}
+                  <p className="text-gray-600 mb-8 max-w-md">
+                    {slide.description}
                   </p>
-                </div> */}
 
-                {/* Price */}
-                {/*   <div className="mb-4">
-                  <span className="text-4xl font-bold">
-                    <span className="underline decoration-3">
-                      {product.price}
-                    </span>
-                  </span>
-                </div> */}
-
-                {/* Product Title */}
-                <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight whitespace-pre-line">
-                  {product.title}
-                </h1>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-8 max-w-md">
-                  {product.description}
-                </p>
-
-                {/* Action Button */}
-                <div>
-                  <Link href={product.buttonLink}>
-                    <button className="bg-transparent text-primary uppercase tracking-wide py-3 px-12 border border-gray-400 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">
-                      {product.buttonText}
-                    </button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right Content - Product Image */}
-              <div className="relative flex items-center justify-center h-full">
-                <div
-                  className={`absolute w-3/4 h-3/4 rounded-full ${product.bgColor} opacity-80`}
-                ></div>
-                <div className="relative z-10">
-                  <Image
-                    src={product.image}
-                    alt={product.imageAlt}
-                    width={400}
-                    height={400}
-                    className="object-contain"
-                    priority
-                  />
+                  {/* Action Button */}
+                  <div>
+                    <Link href={slide.buttonLink}>
+                      <button className="bg-transparent text-primary uppercase tracking-wide py-3 px-12 border border-gray-400 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">
+                        {slide.buttonText}
+                      </button>
+                    </Link>
+                  </div>
                 </div>
 
-                {/* Balu Approved Badge */}
-                <div className="absolute top-2 right-0 w-24 h-24">
-                  <div className="relative w-full h-full">
+                {/* Right Content - Image */}
+                <div className="relative flex items-center justify-center h-full">
+                  <div
+                    className={`absolute w-3/4 h-3/4 rounded-full ${slide.bgColor} opacity-80`}
+                  ></div>
+                  <div className="relative z-10">
                     <Image
-                      src="/badge.png"
-                      alt="Balu Approved"
-                      fill
+                      src={slide.image}
+                      alt={slide.imageAlt}
+                      width={400}
+                      height={400}
                       className="object-contain"
+                      priority
                     />
+                  </div>
+
+                  {/* Badge */}
+                  <div className="absolute top-2 right-0 w-24 h-24">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src="/badge.png"
+                        alt="Appleseed Badge"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+
+        {/* Bullets pagination in the center */}
+        <div
+          className="swiper-pagination-bullets absolute bottom-8 left-0 right-0 mx-auto z-10 text-center"
+          style={{ width: "fit-content", margin: "0 auto" }}
+        ></div>
+      </Swiper>
+
+      <style jsx global>{`
+        .swiper-pagination-bullet {
+          width: 12px;
+          height: 12px;
+          background-color: orange;
+          opacity: 1;
+          margin: 0 5px;
+          display: inline-block;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: maroon;
+        }
+      `}</style>
+    </div>
   );
 }
