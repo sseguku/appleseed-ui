@@ -91,8 +91,6 @@ const schoolData = [
 ];
 
 export default function Homeslider() {
-  const paginationRef = useRef<HTMLDivElement>(null);
-
   return (
     <div className="relative">
       <Swiper
