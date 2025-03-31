@@ -14,7 +14,6 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Image from "next/image";
 
-
 // School data array
 const schoolData = [
   {
@@ -120,7 +119,7 @@ export default function Homeslider() {
           disableOnInteraction: false,
         }}
         modules={[Navigation, Pagination, Autoplay]}
-        className="h-screen w-full relative"
+        className="h-[85vh] w-full relative"
       >
         {schoolData.map((slide) => (
           <SwiperSlide key={slide.id} className={slide.background}>
@@ -149,7 +148,7 @@ export default function Homeslider() {
               </div>
 
               {/* Page Number on right side */}
-              <div className="absolute bottom-8 right-8 text-xl font-medium">
+              <div className="absolute bottom-4 right-8 text-xl font-medium">
                 <span>{slide.id < 10 ? `0${slide.id}` : slide.id}</span>
                 <div className="w-6 h-px bg-gray-400 mx-2 inline-block"></div>
                 <span className="text-gray-400">05</span>
@@ -159,19 +158,19 @@ export default function Homeslider() {
                 {/* Left Content */}
                 <div className="flex flex-col justify-center">
                   {/* Title */}
-                  <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight whitespace-pre-line">
+                  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight whitespace-pre-line">
                     {slide.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-gray-600 mb-8 max-w-md">
+                  <p className="text-gray-600 mb-6 max-w-md text-sm md:text-base">
                     {slide.description}
                   </p>
 
                   {/* Action Button */}
-                  <div>
+                  <div className="mb-4">
                     <Link href={slide.buttonLink}>
-                      <button className="bg-transparent text-primary uppercase tracking-wide py-3 px-12 border border-gray-400 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">
+                      <button className="bg-transparent text-primary uppercase tracking-wide py-2 px-10 border border-gray-400 rounded-full hover:bg-primary hover:text-white transition-colors duration-300">
                         {slide.buttonText}
                       </button>
                     </Link>
@@ -181,7 +180,7 @@ export default function Homeslider() {
                 {/* Right Content - Image */}
                 <div className="relative flex items-center justify-center h-full">
                   <div
-                    className={`absolute w-3/4 h-3/4 rounded-full ${slide.bgColor} opacity-80`}
+                    className={`absolute w-3/5 h-3/4 rounded-full ${slide.bgColor} opacity-80`}
                   ></div>
                   <div className="relative z-10">
                     <Image
@@ -213,7 +212,7 @@ export default function Homeslider() {
 
         {/* Bullets pagination in the center */}
         <div
-          className="swiper-pagination-bullets absolute bottom-8 left-0 right-0 mx-auto z-10 text-center"
+          className="swiper-pagination-bullets absolute bottom-4 left-0 right-0 mx-auto z-10 text-center"
           style={{ width: "fit-content", margin: "0 auto" }}
         ></div>
       </Swiper>
