@@ -24,7 +24,7 @@ const schoolData = [
       "For the Future We Prepare, we nurture young minds with love, creativity, and a strong learning foundation. Through play and discovery, we prepare every child for a bright future—because the journey starts here! ",
     buttonText: "Learn More About Us",
     buttonLink: "/about",
-    image: "/faces_up.png",
+    image: "/welcome_kids.png",
     imageAlt: "Plants in a classroom",
     background: "bg-gradient-to-br from-blue-100 to-blue-200",
     bgColor: "bg-amber-400",
@@ -38,7 +38,7 @@ const schoolData = [
       "Through fun-filled activities and hands-on learning, we engage little minds in purposeful play. Every day is an opportunity to explore, create, and grow in ways that prepare them for a bright future.",
     buttonText: "Explore Our Programs",
     buttonLink: "/programs",
-    image: "/children_slid.png",
+    image: "/circle_play.png",
     imageAlt: "Our Programs",
     background: "bg-gradient-to-br from-green-100 to-yellow-200",
     bgColor: "bg-yellow-300",
@@ -52,7 +52,7 @@ const schoolData = [
       "Our dedicated teachers provide personalized attention, ensuring that each child's unique potential is recognized and celebrated. We guide, nurture, and support every moment of their learning journey.",
     buttonText: "Get in Touch",
     buttonLink: "/contact",
-    image: "/faces_up.png",
+    image: "/caring_hands2.png",
     imageAlt: "Guided by Caring Hands",
     background: "bg-gradient-to-br from-green-100 to-blue-200",
     bgColor: "bg-blue-300",
@@ -67,7 +67,7 @@ const schoolData = [
     button_text: "See How We Teach",
     buttonText: "Enroll Now",
     buttonLink: "/enrollment",
-    image: "/faces_up.png",
+    image: "/jumping_children.png",
     imageAlt: "Enrollement summary image",
     background: "bg-gradient-to-br from-green-100 to-lime-200",
     bgColor: "bg-green-300",
@@ -158,7 +158,7 @@ export default function Homeslider() {
                 {/* Left Content */}
                 <div className="flex flex-col justify-center">
                   {/* Title */}
-                  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight whitespace-pre-line">
+                  <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight whitespace-pre-line">
                     {slide.title}
                   </h1>
 
