@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "../../styles/contact.module.css";
+import { useState } from "react";
 
 import {
   FaChalkboardTeacher,
@@ -10,6 +11,72 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: false, error: false, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({
+          loading: false,
+          success: true,
+          error: false,
+          message: "Message sent successfully!",
+        });
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        throw new Error(data.message || "Something went wrong");
+      }
+    } catch (error) {
+      setStatus({
+        loading: false,
+        success: false,
+        error: true,
+        message: "Failed to send message. Please try again.",
+      });
+    }
+  };
+
   return (
     <div>
       {/* Header Section */}
@@ -181,41 +248,74 @@ export default function Contact() {
             </div>
             {/* Form Side */}
             <div className={styles.formSide}>
-              <form className={styles.contactForm}>
+              <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <div className={styles.formRow}>
                   <input
                     type="text"
+                    name="firstName"
                     placeholder="First Name"
                     required
                     className={styles.input}
+                    value={formData.firstName}
+                    onChange={handleChange}
                   />
                   <input
                     type="text"
+                    name="lastName"
                     placeholder="Last Name"
                     required
                     className={styles.input}
+                    value={formData.lastName}
+                    onChange={handleChange}
                   />
                 </div>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email@yourmail.com"
                   required
                   className={styles.input}
+                  value={formData.email}
+                  onChange={handleChange}
                 />
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
                   required
                   className={styles.input}
+                  value={formData.subject}
+                  onChange={handleChange}
                 />
                 <textarea
+                  name="message"
                   placeholder="Message"
                   className={styles.textarea}
                   rows={6}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
-                <button type="submit" className={styles.submitButton}>
-                  Send Message
+                <button
+                  type="submit"
+                  className={styles.submitButton}
+                  disabled={status.loading}
+                >
+                  {status.loading ? "Sending..." : "Send Message"}
                 </button>
+                {status.message && (
+                  <div
+                    className={`mt-4 p-3 rounded ${
+                      status.success
+                        ? "bg-green-100 text-green-700"
+                        : status.error
+                        ? "bg-red-100 text-red-700"
+                        : ""
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
