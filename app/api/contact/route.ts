@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       to: "appleseedug@gmail.com",
       subject: `Contact Form: ${subject}`,
       html: `
-        <h2>You have received a new message from the Appleseed Preschool & Kindergarten contact form.</h2>
+        <h2>You have received a new message from the Appleseed Preschool & Kindergarten website contact form.</h2>
         <p><strong>Name:</strong> ${firstName} ${lastName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Subject:</strong> ${subject}</p>
