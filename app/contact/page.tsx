@@ -68,11 +68,15 @@ export default function Contact() {
         throw new Error(data.message || "Something went wrong");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setStatus({
         loading: false,
         success: false,
         error: true,
-        message: "Failed to send message. Please try again.",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Failed to send message. Please try again.",
       });
     }
   };
