@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../../../styles/enrollment.module.css";
 
 export default function EnrollmentApplication() {
   const [formData, setFormData] = useState({
