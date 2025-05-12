@@ -137,7 +137,7 @@ export default function Programs() {
                 play-based learning and exploration.
               </p>
               <Link
-                href="/enrollment"
+                href="/enrollment/application"
                 className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-full text-xs transition-colors duration-300"
               >
                 Enroll Now

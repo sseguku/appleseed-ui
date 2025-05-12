@@ -241,7 +241,7 @@ export default function Enrollment() {
 
           <div className="text-center mt-12">
             <a
-              href="#"
+              href="/enrollment/application"
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors"
             >
               Start Application
