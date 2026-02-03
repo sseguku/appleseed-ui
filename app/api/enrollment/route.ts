@@ -72,7 +72,7 @@ export async function POST(req: Request) {
         }</p>
         
         ---
-        <p>This application was submitted via the Appleseed Preschool & Kindergarten website enrollment form.</p>
+        <p>This application was submitted via the Appleseed Academy website enrollment form.</p>
       `,
     };
 

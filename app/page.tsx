@@ -118,13 +118,13 @@ export default function Home() {
               </div>
 
               <p className="text-xs md:text-sm text-justify text-gray-600 leading-relaxed mb-8">
-                Welcome to Appleseed Preschool and Kindergarten, where
-                curiosity, creativity, and care shape every child's journey. We
-                nurture young minds in a warm, engaging environment that
-                inspires a lifelong love for learning. With dedicated educators,
-                innovative programs, and personalized attention, we help each
-                child explore, grow, and thrive at their own pace, laying the
-                foundation for a bright future filled with joyful discoveries.
+                Welcome to Appleseed Academy, where curiosity, creativity, and
+                care shape every child's journey. We nurture young minds in a
+                warm, engaging environment that inspires a lifelong love for
+                learning. With dedicated educators, innovative programs, and
+                personalized attention, we help each child explore, grow, and
+                thrive at their own pace, laying the foundation for a bright
+                future filled with joyful discoveries.
               </p>
 
               {/* Read More Button */}
@@ -260,10 +260,10 @@ export default function Home() {
               What Makes Us Special
             </h2>
             <p className="text-xs md:text-sm text-center text-gray-600 leading-relaxed mb-4 w-3/4 mx-auto">
-              Appleseed Preschool & Kindergarten offers a nurturing, play-based
-              learning environment with a rich curriculum, passionate teachers,
-              engaging activities, and a safe, child-friendly space—building a
-              strong foundation for lifelong learning.
+              Appleseed Academy offers a nurturing, play-based learning
+              environment with a rich curriculum, passionate teachers, engaging
+              activities, and a safe, child-friendly space—building a strong
+              foundation for lifelong learning.
             </p>
           </div>
 
@@ -506,8 +506,7 @@ export default function Home() {
               <div className="prose prose-sm text-xs md:text-sm text-justify text-gray-600">
                 <p className="mb-4">
                   Our swimming pool is an exclusive facility for Appleseed
-                  Preschool and Kindergarten students during school days (Monday
-                  to Friday).
+                  Academy students during school days (Monday to Friday).
                 </p>
                 <p className="mb-4">
                   On weekends, the pool is open to the public at a fee of

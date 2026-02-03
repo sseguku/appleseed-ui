@@ -129,7 +129,7 @@ export default function EnrollmentApplication() {
           </h1>
           <p className="text-gray-600">
             Please fill out this form to begin your child's enrollment process
-            at Appleseed Preschool & Kindergarten.
+            at Appleseed Academy.
           </p>
         </div>
 

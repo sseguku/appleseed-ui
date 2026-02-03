@@ -16,9 +16,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "For the Future We Prepare | Appleseed Preschool",
+  title: "Growing Minds, Building Futures | Appleseed Academy",
   description:
-    "Appleseed Preschool and Kindergarten - Nurturing young minds for a brighter tomorrow",
+    "Appleseed Academy - Nurturing young minds for a brighter tomorrow",
 };
 
 export default function RootLayout({

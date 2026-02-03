@@ -28,7 +28,7 @@ const schoolData = [
     imageAlt: "Plants in a classroom",
     background: "bg-gradient-to-br from-blue-100 to-blue-200",
     bgColor: "bg-amber-400",
-    verticalText: "APPLESEED PRESCHOOL & KINDERGARTEN",
+    verticalText: "APPLESEED ACADEMY",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const schoolData = [
     imageAlt: "Our Programs",
     background: "bg-gradient-to-br from-green-100 to-yellow-200",
     bgColor: "bg-yellow-300",
-    verticalText: "APPLESEED PRESCHOOL & KINDERGARTEN",
+    verticalText: "APPLESEED ACADEMY",
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const schoolData = [
     imageAlt: "Guided by Caring Hands",
     background: "bg-gradient-to-br from-green-100 to-blue-200",
     bgColor: "bg-blue-300",
-    verticalText: "APPLESEED PRESCHOOL & KINDERGARTEN",
+    verticalText: "APPLESEED ACADEMY",
   },
   {
     id: 4,
@@ -71,7 +71,7 @@ const schoolData = [
     imageAlt: "Enrollement summary image",
     background: "bg-gradient-to-br from-green-100 to-lime-200",
     bgColor: "bg-green-300",
-    verticalText: "APPLESEED PRESCHOOL & KINDERGARTEN",
+    verticalText: "APPLESEED ACADEMY",
   },
   {
     id: 5,
@@ -85,7 +85,7 @@ const schoolData = [
     imageAlt: "Book A Tour",
     background: "bg-gradient-to-br from-green-100 to-pink-200",
     bgColor: "bg-pink-300",
-    verticalText: "APPLESEED PRESCHOOL & KINDERGARTEN",
+    verticalText: "APPLESEED ACADEMY",
   },
 ];
 

@@ -85,7 +85,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              About Appleseed Preschool & Kindergarten
+              About Appleseed Academy
             </h1>
             <div className="w-24 h-1 bg-primary/80 mx-auto mb-6"></div>
             <p className="text-sm md:text-base text-gray-700 max-w-3xl mx-auto">
@@ -130,9 +130,8 @@ export default function About() {
                 <FaQuoteLeft className="text-primary/20 w-12 h-12 absolute -top-6 -left-6" />
                 <p className="text-sm text-gray-700 mb-4 relative z-10">
                   Founded with a vision to provide exceptional early education,
-                  Appleseed Preschool & Kindergarten has grown into a vibrant
-                  learning community where children discover the joy of
-                  learning.
+                  Appleseed Academy has grown into a vibrant learning community
+                  where children discover the joy of learning.
                 </p>
                 <p className="text-sm text-gray-700 mb-4">
                   Our journey began with a simple belief: that every child
