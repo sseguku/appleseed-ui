@@ -45,7 +45,6 @@ export default function Navbar() {
               href="/"
               className="relative h-12 w-auto flex items-center justify-center"
             >
-              /*{" "}
               <Image
                 src="/appleseed_name_v4.png"
                 alt="Appleseed Logo"
@@ -53,8 +52,7 @@ export default function Navbar() {
                 height={48}
                 className="object-contain w-full h-full"
                 priority
-              />{" "}
-              */
+              />
             </Link>
           </div>
 

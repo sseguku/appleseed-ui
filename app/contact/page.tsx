@@ -2,6 +2,7 @@
 
 import styles from "../../styles/contact.module.css";
 import { useState } from "react";
+import Image from "next/image";
 
 import {
   FaChalkboardTeacher,
@@ -244,10 +245,12 @@ export default function Contact() {
               )`,
               }}
             >
-              <img
+              <Image
                 src="https://i.postimg.cc/dt1gR44G/The-Telephone-Is-Your-Best-Friend.jpg"
                 alt="Talk to us"
-                className="w-full h-[600px] object-cover rounded-lg shadow-lg relative "
+                width={800}
+                height={600}
+                className="w-full h-[600px] object-cover rounded-lg shadow-lg relative"
               />
             </div>
             {/* Form Side */}
