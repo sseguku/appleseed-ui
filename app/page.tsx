@@ -79,7 +79,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="max-w-7xl py-0 mx-auto">
+    <main className="w-full py-0">
       <section className="py-0 bg-primary relative">
         <Homeslider />
       </section>
@@ -104,8 +104,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Column */}
-            <div className="relative z-10 rounded-xl object-cover w-[700px] h-[350px]">
-              <Image src={mCircle} alt="Morning Circle" />
+            <div className="relative z-10 rounded-xl overflow-hidden w-full max-w-xl mx-auto lg:mx-0">
+              <Image
+                src={mCircle}
+                alt="Morning Circle"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Content Column */}
