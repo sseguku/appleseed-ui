@@ -23,7 +23,7 @@ import {
 import Link from "next/link";
 import Homeslider from "./components/Homeslider";
 import Image from "next/image";
-import mCircle from "@/public/morning_circle.jpg";
+
 import homeClass from "@/public/classes_v1.jpg";
 import parentHome from "@/public/parents_v1.jpg";
 import teacherHome from "@/public/teachers_v2.jpg";
