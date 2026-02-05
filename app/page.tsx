@@ -106,8 +106,10 @@ export default function Home() {
             {/* Image Column */}
             <div className="relative z-10 rounded-xl overflow-hidden w-full max-w-xl mx-auto lg:mx-0">
               <Image
-                src={mCircle}
+                src="/new_logo.png"
                 alt="Morning Circle"
+                width={200}
+                height={200}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -118,7 +120,7 @@ export default function Home() {
                 Our Story
               </span>
               <div className="text-lg md:text-3xl lg:text-3xl font-bold text-[#36b54a] mb-6">
-                For The Future We Prepare
+                Growing Minds, Building Futures
               </div>
 
               <p className="text-xs md:text-sm text-justify text-gray-600 leading-relaxed mb-8">
