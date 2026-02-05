@@ -52,7 +52,7 @@ export default function Navbar() {
                 height={48}
                 className="object-contain w-full h-full"
                 priority
-              />
+              ></Image>
             </Link>
           </div>
 
